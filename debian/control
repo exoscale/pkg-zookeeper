@@ -3,8 +3,7 @@ Maintainer: Vincent Bernat <bernat@debian.org>
 Build-Depends: debhelper (>= 9),
                wget, ca-certificates, lsb-release,
                dh-systemd,
-               ant,
-               default-jdk-headless (>= 1:1.7) | java7-sdk-headless | java8-sdk-headless
+               zip
 
 Package: zookeeper
 Architecture: any
