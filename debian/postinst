@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+NAME="zookeeper"
+GROUP=$NAME
+USER=$NAME
+DATADIR="/var/lib/zookeeper"
+
+case "$1" in
+    configure)
+        adduser --system --disabled-password --disabled-login --home $DATADIR \
+                --no-create-home --quiet --force-badname --group $USER
+        chown $USER:adm /var/log/zookeeper
+        chown $USER:$GROUP $DATADIR
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

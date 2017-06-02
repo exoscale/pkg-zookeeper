@@ -1,0 +1,14 @@
+Source: zookeeper
+Maintainer: Vincent Bernat <bernat@debian.org>
+Build-Depends: debhelper (>= 9),
+               wget, ca-certificates, lsb-release,
+               dh-systemd,
+               ant,
+               default-jdk-headless (>= 1:1.7) | java7-sdk-headless | java8-sdk-headless
+
+Package: zookeeper
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+         adduser,
+         default-jre-headless (>= 1:1.7) | java7-runtime-headless | java8-runtime-headless
+Description: High-performance coordination service for distributed applications
