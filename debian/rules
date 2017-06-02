@@ -2,7 +2,7 @@
 
 DISTRIBUTION = $(shell lsb_release -sc)
 VERSION = 3.4.10
-PACKAGEVERSION = $(VERSION)-0~$(DISTRIBUTION)0
+PACKAGEVERSION = $(VERSION)-0~$(DISTRIBUTION)1
 TARBALL = zookeeper-$(VERSION).tar.gz
 URL = https://apache.org/dist/zookeeper/zookeeper-$(VERSION)/$(TARBALL)
 
@@ -16,7 +16,7 @@ override_dh_auto_build:
 	cd src/contrib/fatjar && ant -Divy.home=$(CURDIR) jar
 
 override_dh_link:
-	dh_link usr/share/java/zookeeper-$(VERSION)-fatjar.jar usr/share/java/zookeeper.jar
+	dh_link usr/share/java/zookeeper-dev-fatjar.jar usr/share/java/zookeeper.jar
 	dh_link etc/zookeeper/conf/environment usr/share/zookeeper/bin/zkEnv.sh
 	dh_link etc/zookeeper/conf/myid var/lib/zookeeper/myid
 
