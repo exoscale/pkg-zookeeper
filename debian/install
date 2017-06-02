@@ -1,3 +1,3 @@
-build/contrib/fatjar/zookeeper-*-fatjar.jar usr/share/java
+contrib/fatjar/zookeeper-*-fatjar.jar usr/share/java
 conf/* etc/zookeeper/conf
 bin/*.sh usr/share/zookeeper/bin

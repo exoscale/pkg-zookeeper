@@ -12,8 +12,6 @@ URL = https://apache.org/dist/zookeeper/zookeeper-$(VERSION)/$(TARBALL)
 override_dh_auto_build:
 	wget -N --progress=dot:mega $(URL)
 	tar --strip-components=1 -xf $(TARBALL)
-	ant -Divy.home=$(CURDIR) compile-test
-	cd src/contrib/fatjar && ant -Divy.home=$(CURDIR) jar
 
 override_dh_link:
 	dh_link usr/share/java/zookeeper-dev-fatjar.jar usr/share/java/zookeeper.jar
