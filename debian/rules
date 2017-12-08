@@ -21,3 +21,5 @@ override_dh_link:
 
 override_dh_gencontrol:
 	dh_gencontrol -- -v$(PACKAGEVERSION)
+
+override_dh_strip_nondeterminism:
