@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 DISTRIBUTION = $(shell lsb_release -sc)
-VERSION = 3.5.5
+VERSION = 3.6.2
 PACKAGEVERSION = $(VERSION)-0~$(DISTRIBUTION)1
 TARBALL = apache-zookeeper-$(VERSION)-bin.tar.gz
 URL = https://apache.org/dist/zookeeper/zookeeper-$(VERSION)/$(TARBALL)
