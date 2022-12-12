@@ -4,7 +4,7 @@ DISTRIBUTION = $(shell lsb_release -sc)
 VERSION = 3.6.2
 PACKAGEVERSION = $(VERSION)-0~$(DISTRIBUTION)1
 TARBALL = apache-zookeeper-$(VERSION)-bin.tar.gz
-URL = https://apache.org/dist/zookeeper/zookeeper-$(VERSION)/$(TARBALL)
+URL = https://archive.apache.org/dist/zookeeper/zookeeper-$(VERSION)/$(TARBALL)
 
 %:
 	dh $@ --with systemd
