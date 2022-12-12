@@ -1,8 +1,7 @@
 Source: zookeeper
 Maintainer: Vincent Bernat <bernat@debian.org>
-Build-Depends: debhelper (>= 9),
+Build-Depends: debhelper (>= 9.20160709),
                wget, ca-certificates, lsb-release,
-               dh-systemd,
                zip
 
 Package: zookeeper
